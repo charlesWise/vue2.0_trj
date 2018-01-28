@@ -1,6 +1,6 @@
-# vue2.0_trj
+# vue2.0
 
-> vue2.0_trj project
+> vue2.0 vuex webpack es6 axios .ect
 
 # Build Setup
 
@@ -14,5 +14,5 @@ npm run dev
 # build for production with minification
 npm run build
 ```
-#github URL
+#git URL
 > https://github.com/chenrunsheng1991/vue2.0_trj.git
