@@ -3,19 +3,19 @@ import Invest from './../views/invest/Invest.vue';
 
 export default [
   {
-    path:'/home',
+    path: '/home',
     component: Home
   },
   {
-    path:'/invest',
+    path: '/invest',
     component: Invest
   },
-  { 
-    path: '/', 
+  {
+    path: '/',
     redirect: '/home'
   },
-  { 
-    path: '*', 
+  {
+    path: '*',
     redirect: '/home'
   }
 ];
