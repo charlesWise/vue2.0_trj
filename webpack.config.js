@@ -8,6 +8,22 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
+  // devServer: {
+  //   historyApiFallback: true,
+  //   hot: true,
+  //   inline: true,
+  //   progress: true,
+  //   port: 8080,
+  //   host: '0.0.0.0',
+  //   proxy: {
+  //     '/api': {
+  //       target: 'https://m.tourongjia.com',
+  //       changeOrigin: true,
+  //       pathRewrite: { '^/api': '' },
+  //       secure: false
+  //     }
+  //   }
+  // },
   module: {
     rules: [
       {

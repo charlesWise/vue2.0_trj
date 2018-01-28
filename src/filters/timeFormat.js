@@ -1,5 +1,5 @@
 
-export const normalTime = (time) => {
+export const timeFormat = (time) => {
     if (time) {
         var oDate = new Date();
         oDate.setTime(time);
@@ -9,9 +9,9 @@ export const normalTime = (time) => {
         var d = oDate.getDate();
 
         var h = oDate.getHours();
-        var m = oDate.getMinutes();
+        var mm = oDate.getMinutes();
         var s = oDate.getSeconds();
 
-        return y + '-' + m + '-' + d + ' ' + h + ':' + m + ':' + s;
+        return y + '-' + m + '-' + d + ' ' + h + ':' + mm + ':' + s;
     }
 }
