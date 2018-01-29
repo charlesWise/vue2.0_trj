@@ -8,22 +8,6 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
-  // devServer: {
-  //   historyApiFallback: true,
-  //   hot: true,
-  //   inline: true,
-  //   progress: true,
-  //   port: 8080,
-  //   host: '0.0.0.0',
-  //   proxy: {
-  //     '/api': {
-  //       target: 'https://m.tourongjia.com',
-  //       changeOrigin: true,
-  //       pathRewrite: { '^/api': '' },
-  //       secure: false
-  //     }
-  //   }
-  // },
   module: {
     rules: [
       {
@@ -93,8 +77,26 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
+    contentBase: "./",
+    quiet: false, //控制台中不输出打包的信息
     noInfo: true,
-    overlay: true
+    overlay: true,
+    hot: true, //开启热点
+    inline: true, //开启页面自动刷新
+    lazy: false, //不启动懒加载
+    progress: true, //显示打包的进度
+    watchOptions: {
+      aggregateTimeout: 300
+    },
+    port: '8080', //设置端口号
+    proxy: {
+      '/api': {
+        target: 'https://m.tourongjia.com',
+        changeOrigin: true,
+        pathRewrite: { '^/api': '' },
+        secure: false
+      }
+    }
   },
   performance: {
     hints: false
