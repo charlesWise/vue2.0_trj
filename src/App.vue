@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     <loading v-if="isLoading" />
-		<HeaderView />
+	<HeaderView />
     <transition name="slide-down">
-			<keep-alive>
-        <router-view class="router-view"></router-view>
-      </keep-alive>
-		</transition>
+		<keep-alive>
+        	<router-view class="router-view"></router-view>
+    	</keep-alive>
+	</transition>
     <FooterView />
   </div>
 </template>
@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     getData() {
-      this.$http.post('/Mobile2/IndexApp/recommend30', {})
+      this.$http.post('/api/Mobile2/IndexApp/recommend30', {})
       .then(function (response) {
         console.log(response);
       })

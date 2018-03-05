@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router';
-import axios from 'axios'
+import axios from 'axios';
 import Loading from './components/loading'; //自定义loading的组件install,需要use
 import routes from './routes';
 import store from './store';
@@ -14,7 +14,7 @@ Vue.use(Loading);
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-  mode: 'history', //切换路径模式，变成history模式
+  // mode: 'history', //切换路径模式，变成history模式地址不会出现＃
   scrollBehavior: () => ({ y: 0 }), // 滚动条滚动的行为，不加这个默认就会记忆原来滚动条的位置
   routes
 });
