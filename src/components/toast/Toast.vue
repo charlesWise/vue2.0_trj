@@ -12,7 +12,7 @@
 			}
 		},
 		mounted() {
-			// this.autoClose()
+			this.autoClose()
 		},
 		methods: {
 			autoClose() {

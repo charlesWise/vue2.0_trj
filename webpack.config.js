@@ -1,5 +1,16 @@
 var path = require('path');
 var webpack = require('webpack');
+var express = require('express');
+var proxy = require('http-proxy-middleware');
+
+var options = {
+        target: 'https://m.tourongjia.com',
+        changeOrigin: true,
+        pathRewrite: { '^/api': '' }
+    };
+
+var app = express();
+app.use('/api', proxy(options));
 
 module.exports = {
   entry: './src/main.js',
@@ -90,12 +101,7 @@ module.exports = {
     },
     port: '8080', //设置端口号
     proxy: {
-      '/api': {
-        target: 'https://m.tourongjia.com',
-        changeOrigin: true,
-        pathRewrite: { '^/api': '' },
-        secure: false
-      }
+      
     }
   },
   performance: {
