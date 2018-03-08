@@ -24,7 +24,7 @@ export default {
     }
   },
   mounted() {
-    this.getData();
+    // this.getData();
   },
   methods: {
     getData() {
@@ -37,10 +37,10 @@ export default {
       });
     }
   },
-  computed:mapGetters([
+  computed: mapGetters([
     'isLoading'
   ]),
-  components:{
+  components: {
     HeaderView,
     FooterView
   }

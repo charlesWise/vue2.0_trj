@@ -21,7 +21,7 @@
       </footer>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	@import "./../assets/styles/mixin.scss";
 	.footer-wrap{
 		position: fixed;

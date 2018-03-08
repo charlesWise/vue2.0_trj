@@ -9,6 +9,9 @@
 			return {
 				
 			}
+		},
+		mounted() {
+			this.$toast('出错了!');
 		}
 	}
 

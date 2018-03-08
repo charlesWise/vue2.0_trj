@@ -2,15 +2,19 @@ import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router';
 import axios from 'axios';
-import Loading from './components/loading'; //自定义loading的组件install,需要use
 import routes from './routes';
 import store from './store';
 import filters from './filters';
+
+import Loading from './components/loading'; //自定义loading的组件install,需要use
+import Toast from './components/toast';
+
 //引入全局的reset文件
 require('./assets/styles/reset.css');
 
 Object.keys(filters).forEach(filter => Vue.filter(filter, filters[filter]))
 Vue.use(Loading);
+Vue.use(Toast);
 Vue.use(VueRouter);
 
 const router = new VueRouter({

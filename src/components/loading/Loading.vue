@@ -14,7 +14,7 @@
 	    </div>
     </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 	.loading-wrap{
 		position: fixed;
 		z-index: 1000;
